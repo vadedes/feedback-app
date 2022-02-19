@@ -1,14 +1,23 @@
-import './App.css';
+import { useState } from 'react';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Content from './components/Content';
+import FeedbackList from './components/FeedbackList';
+import FeedbackData from './data/FeedbackData';
 
 function App() {
+   const [feedback, setFeedback] = useState(FeedbackData);
+
+   const deleteFeedback = (id) => {
+      if (window.confirm('Are you sure you want to delete this item?')) {
+         setFeedback(feedback.filter((item) => item.id !== id));
+      }
+   };
+
    return (
       <>
-         <Header text='Navbar goes here' />
-         <Content />
-         <Footer text='Footer goes here' />
+         <Header text='Feedback UI' />
+         <div className='container'>
+            <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+         </div>
       </>
    );
 }
