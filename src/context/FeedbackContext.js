@@ -45,6 +45,11 @@ export const FeedbackProvider = ({ children }) => {
   //update the feedback data when edited instead of adding a new one
   const updateFeedback = (id, updItem) => {
     setFeedback(feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item)));
+    //reset the form when editing so we can continue adding new comments and don't get stuck in edit mode
+    setFeedbackEdit({
+      item: {},
+      edit: false,
+    });
   };
 
   //set item to be updated
