@@ -1,0 +1,34 @@
+{
+  "feedback": [
+    {
+      "id": 2,
+      "rating": 6,
+      "text": "This is feedback item 2 coming from the backend"
+    },
+    {
+      "id": 3,
+      "rating": 8,
+      "text": "This is feedback item 3 coming from the backend"
+    },
+    {
+      "text": "This is a new feedback item to be stored in the server.",
+      "rating": 5,
+      "id": 4
+    },
+    {
+      "text": "Another test for adding new feedbacks to the server.",
+      "rating": 7,
+      "id": 5
+    },
+    {
+      "text": "This is feedback item 1 that was deleted a while ago.",
+      "rating": 3,
+      "id": 6
+    },
+    {
+      "text": "This is a test feedback for EDIT method. did it work?",
+      "rating": 8,
+      "id": 7
+    }
+  ]
+}
